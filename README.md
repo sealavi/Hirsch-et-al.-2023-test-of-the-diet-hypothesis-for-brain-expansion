@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/712567727.svg)](https://zenodo.org/doi/10.5281/zenodo.10059598)
+
 # Hirsch-et-al.-2023-test-of-the-diet-hypothesis-for-brain-expansion
 This repository contains r code related to Hirsch et al 2023 test of the diet hypothesis for brain expansion
 
