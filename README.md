@@ -51,7 +51,7 @@ Be sure to change the working directory to an appropriate one on your system. Al
 ```daily stuff for ben 2023 full day.R``` This script takes the output of ```intertree stuff 2023.R``` and calculates daily summaries of tree visitation for each animal.
 ```daily stuff for ben 2023 2 hour.R``` and ```daily stuff for ben 2023 4 hour.R``` are the same implementation as ```daily stuff for ben 2023 full day.R``` but used on the first 2 and 4 hours of data respectively
 
-```Ben regression models.R``` takes the outputs of ```intertree stuff 2023.R```, ```intertree stuff 2023_2_hour.R```, ```intertree stuff 2023_4_hour.R```, ```daily stuff for ben 2023 full day.R```, ```daily stuff for ben 2023 2 hour.R``` and ```daily stuff for ben 2023 4 hour.R``` calculates efficiency metrics implements regression analyses.
+```Ben regression models.R``` takes the outputs of ```intertree stuff 2023.R```, ```intertree stuff 2023_2_hour.R```, ```intertree stuff 2023_4_hour.R```, ```daily stuff for ben 2023 full day.R```, ```daily stuff for ben 2023 2 hour.R``` and ```daily stuff for ben 2023 4 hour.R```, calculates efficiency metrics, and implements regression analyses.
 
 ```fft random movement comparison.R``` generates simulations of random movement models (brownian motion and OUF motion) and compares tree visitation rates of random movement to observed encounter rates. 
 
