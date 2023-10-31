@@ -11,12 +11,12 @@ The following script installs the most recent versions of the required packages 
 ```
 install.packages(c("devtools","miniCRAN","pacman"), dependencies = TRUE, type="source") 
 devtools::install_github("wrathematics/getPass")
-devtools::install_github("ctmm-initiative/ctmmh")
+devtools::install_github("ctmm-initiative/ctmm")
 
 
 #Check if required packages and their dependencies need installation or updates
 list_of_required_packages <- c("plyr", "dplyr", "lubridate", "tidyr", "tidyverse", "data.table", "ggplot2", "ggpubr", "sp", 
-"rgdal", "raster", "move", "ctmm", "lme4","emmeans", "StanHeaders", "rstan", "brms")
+"rgdal", "raster", "move", "lme4","emmeans", "StanHeaders", "rstan", "brms")
 
 check_if_needs_install=as.character(miniCRAN::pkgDep(list_of_required_packages, suggests = TRUE, enhances = TRUE))
 check_if_needs_update=as.character(pacman::p_update(FALSE))
