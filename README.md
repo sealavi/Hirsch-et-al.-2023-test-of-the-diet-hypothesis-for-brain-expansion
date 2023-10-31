@@ -39,13 +39,20 @@ Be sure to change the working directory to an appropriate one on your system. Al
 ## Script metadata
 
 ```Reconstruct movement tracks to continuous time.R```: This script contains our implementation of path reconstruction to interpolate our data to continuous time
+
 ```FFT CTMM Distances.R```: This script implements the estimation of daily travel distance as described in Noonan et al. 2019
-```Daily Path Length estimates.R```: This script estimates daily travel distance using the interpolated data as well as the original 4 min data and merges these estimates with the estimates from  ```FFT CTMM Distances.R```. The output of this script is used in ```Ben regression models.R```
+
+```Daily Path Length estimates.R```: This script estimates daily travel distance using the interpolated data as well as the original 4 min data and merges these estimates with the estimates from  ```FFT CTMM Distances.R```. The output of this script is used in ```daily stuff for ben 2023 full day.R```
+
 ```intertree stuff 2023.R``` This script is our implementation of estimating tree visitation and revisitation and uses the outputs of  ```Reconstruct movement tracks to continuous time.R```. 
+
 ```intertree stuff 2023_2_hour.R``` and ```intertree stuff 2023_4_hour.R``` are the same implementation as ```intertree stuff 2023.R``` but used on the first 2 and 4 hours of data respectively
+
 ```daily stuff for ben 2023 full day.R``` This script takes the output of ```intertree stuff 2023.R``` and calculates daily summaries of tree visitation for each animal.
 ```daily stuff for ben 2023 2 hour.R``` and ```daily stuff for ben 2023 4 hour.R``` are the same implementation as ```daily stuff for ben 2023 full day.R``` but used on the first 2 and 4 hours of data respectively
+
 ```Ben regression models.R``` takes the outputs of ```intertree stuff 2023.R```, ```intertree stuff 2023_2_hour.R```, ```intertree stuff 2023_4_hour.R```, ```daily stuff for ben 2023 full day.R```, ```daily stuff for ben 2023 2 hour.R``` and ```daily stuff for ben 2023 4 hour.R``` calculates efficiency metrics implements regression analyses.
+
 ```fft random movement comparison.R``` generates simulations of random movement models (brownian motion and OUF motion) and compares tree visitation rates of random movement to observed encounter rates. 
 
 
