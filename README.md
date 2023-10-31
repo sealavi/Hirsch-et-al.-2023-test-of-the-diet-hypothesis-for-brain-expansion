@@ -4,7 +4,7 @@ This repository contains r code related to Hirsch et al 2023 test of the diet hy
 Original movement data are hosted on [Movebank](https://www.movebank.org/) (Processed data: Movebank ID 1120749252; Unprocessed data: Movebank ID 468460067)
  
  ## Instructions
-There are various packages with complex dependencies used accross the scripts used in this study. In order to install every package, Windows users must first ensure that the latest version of [rtools](https://cran.r-project.org/bin/windows/Rtools/) is properly installed. Mac users must ensure that the latest version of [Xcode](https://developer.apple.com/xcode/) is properly installed.  This step cannot be skipped .
+There are various packages with complex dependencies used across the scripts used in this study. In order to install every package, Windows users must first ensure that the latest version of [rtools](https://cran.r-project.org/bin/windows/Rtools/) is properly installed. Mac users must ensure that the latest version of [Xcode](https://developer.apple.com/xcode/) is properly installed.  This step cannot be skipped .
 
 The following script installs the most recent versions of the required packages and their dependencies:
 
@@ -34,7 +34,7 @@ You will also need to install [cmdstan](https://mc-stan.org/docs/2_25/cmdstan-gu
 
 
           
-Be sure to change the working directory to an appropriate one on your system. Also be sure to modify where write.csv() saves all outputs. 
+Be sure to change the working directory to an appropriate one on your system. Also, be sure to modify where write.csv() saves all outputs. 
 
 ## Script metadata
 
@@ -44,15 +44,15 @@ Be sure to change the working directory to an appropriate one on your system. Al
 
 ```Daily Path Length estimates.R```: This script estimates daily travel distance using the interpolated data as well as the original 4 min data and merges these estimates with the estimates from  ```FFT CTMM Distances.R```. The output of this script is used in ```daily stuff for ben 2023 full day.R```
 
-```intertree stuff 2023.R``` This script is our implementation of estimating tree visitation and revisitation and uses the outputs of  ```Reconstruct movement tracks to continuous time.R```. 
+```intertree stuff 2023.R``` This script is our implementation of estimating tree visitation and revisitation and uses the outputs of  ```Reconstruct movement tracks to continuous time.R```. This script also calculates the proportion of time spent active in each crown, where the proportion of VeDBA values above and below our activity threshold are calculated and appended to the visit/revisit data. The VeDBA accrued traveling between crowns is also calculated here.
 
-```intertree stuff 2023_2_hour.R``` and ```intertree stuff 2023_4_hour.R``` are the same implementation as ```intertree stuff 2023.R``` but used on the first 2 and 4 hours of data respectively
+```intertree stuff 2023_2_hour.R``` and ```intertree stuff 2023_4_hour.R``` are the same implementation as ```intertree stuff 2023.R``` but used on the first 2 or 4 hours of data per day respectively.
 
 ```daily stuff for ben 2023 full day.R``` This script takes the output of ```intertree stuff 2023.R``` and calculates daily summaries of tree visitation for each animal.
-```daily stuff for ben 2023 2 hour.R``` and ```daily stuff for ben 2023 4 hour.R``` are the same implementation as ```daily stuff for ben 2023 full day.R``` but used on the first 2 and 4 hours of data respectively
+```daily stuff for ben 2023 2 hour.R``` and ```daily stuff for ben 2023 4 hour.R``` are the same implementation as ```daily stuff for ben 2023 full day.R``` but used on the first 2 or 4 hours of data per day respectively.
 
 ```Ben regression models.R``` takes the outputs of ```intertree stuff 2023.R```, ```intertree stuff 2023_2_hour.R```, ```intertree stuff 2023_4_hour.R```, ```daily stuff for ben 2023 full day.R```, ```daily stuff for ben 2023 2 hour.R``` and ```daily stuff for ben 2023 4 hour.R```, calculates efficiency metrics, and implements regression analyses.
 
-```fft random movement comparison.R``` generates simulations of random movement models (brownian motion and OUF motion) and compares tree visitation rates of random movement to observed encounter rates. 
+```fft random movement comparison.R``` generates simulations of random movement models (Brownian motion and OUF motion) and compares tree visitation rates of random movement to observed encounter rates. 
 
 
